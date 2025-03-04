@@ -1,2 +1,2 @@
 # python-
-group learning 
+group learning and creating python module
