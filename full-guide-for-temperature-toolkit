@@ -1,0 +1,80 @@
+🌡️ Temperature Toolkit
+A modular Python package for managing, analyzing, and converting temperature data.
+
+📁 Project Structure
+
+project_root/
+│
+├── temperature_toolkit/
+│   ├── __init__.py
+│   ├── record.py
+│   ├── converter.py
+│   └── analytics.py
+│
+└── main_script.py  # Example: from temperature_toolkit import Temperat.py
+⚠️ Place your main script (like from temperature_toolkit import Temperat.py) outside the temperature_toolkit folder but in the same directory.
+
+🔧 Installation
+No installation needed if you're running it locally. Just ensure the folder structure matches the one shown above.
+
+📦 Modules Overview
+1. record.py
+TemperatureRecord — A class representing daily temperature readings.
+
+Methods:
+
+convert_to(unit) — Converts between Celsius and Fahrenheit.
+
+get_summary() — Returns summary statistics for the day.
+
+2. converter.py
+convert(value, from_unit, to_unit) — Converts a single temperature value.
+
+3. analytics.py
+average_temperature_across_days(records)
+
+hottest_day(records)
+
+detect_extreme_days(records, threshold)
+
+temperature_range_for_each_day(records)
+
+temperature_trend(temps)
+
+detect_spike(temps, threshold=5)
+
+🚀 How to Use
+✅ Example: from temperature_toolkit import Temperat.py
+
+code start from here :
+from temperature_toolkit import TemperatureRecord, convert, average_temperature_across_days
+
+record1 = TemperatureRecord("2025-05-01", [20.0, 22.5, 19.0], "celsius")
+record2 = TemperatureRecord("2025-05-02", [68.0, 70.0, 66.0], "fahrenheit")
+
+record2.convert_to("celsius")
+
+print("Record 1 Summary:", record1.get_summary())
+print("Record 2 Summary:", record2.get_summary())
+
+records = [record1, record2]
+print("Overall Average:", average_temperature_across_days(records))
+📈 Features
+Accurate unit conversions between Celsius and Fahrenheit.
+
+Analyze trends and detect temperature spikes.
+
+Identify extreme temperature days with thresholds.
+
+Determine temperature range per day.
+
+Find the hottest day among many records.
+
+📋 Requirements
+Python 3.x
+
+No external libraries required (pure Python).
+
+🧪 Testing
+You can test the toolkit by creating and running your main script as shown in the usage section above.
+
